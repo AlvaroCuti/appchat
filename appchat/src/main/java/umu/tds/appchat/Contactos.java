@@ -13,6 +13,10 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
+import java.awt.Font;
 
 public class Contactos {
 
@@ -66,6 +70,15 @@ public class Contactos {
                         gbc_panelLista1.gridy = 0;
                         frmContactos.getContentPane().add(panelLista1, gbc_panelLista1);
                         
+                        JPanel panel_2 = new JPanel();
+                        panelLista1.add(panel_2);
+                        panel_2.setLayout(new BoxLayout(panel_2, BoxLayout.X_AXIS));
+                        
+                        JLabel lblNewLabel = new JLabel("Lista Contactos");
+                        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
+                        lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
+                        panel_2.add(lblNewLabel);
+                        
                                 JScrollPane scrollPane1 = new JScrollPane();
                                 panelLista1.add(scrollPane1);
                                 
@@ -116,6 +129,9 @@ public class Contactos {
                 gbc_panelLista2.gridx = 2;
                 gbc_panelLista2.gridy = 0;
                 frmContactos.getContentPane().add(panelLista2, gbc_panelLista2);
+                
+                
+                
                 
                         JScrollPane scrollPane2 = new JScrollPane();
                         panelLista2.add(scrollPane2);
